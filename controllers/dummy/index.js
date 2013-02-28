@@ -1,35 +1,26 @@
 
-var db = require('../../db');
 
 exports.before = function(req, res, next){
-  var id = req.params.user_id;
-  if (!id) return next();
-  // pretend to query a database...
-  process.nextTick(function(){
-    req.user = db.users[id];
-    // cant find that user
-    if (!req.user) return next(new Error('User not found'));
-    // found it, move on to the routes
-    next();
-  });
+console.log("before");
 }
 
 exports.list = function(req, res, next){
-  manu.cache(req, {ttl: 111, params: []});
-  res.render('list', { users: db.users });
+console.log("list");
+console.log(req);
+
 };
 
 exports.edit = function(req, res, next){
-  res.render('edit', { user: req.user });
+console.log("edit");
+console.log(req);
 };
 
 exports.show = function(req, res, next){
-  res.render('show', { user: req.user });
+console.log("show");
+console.log(req);
 };
 
 exports.update = function(req, res, next){
-  var body = req.body;
-  req.user.name = body.user.name;
-  res.message('Information updated!');
-  res.redirect('/user/' + req.user.id);
+console.log("update");
+console.log(req);
 };
