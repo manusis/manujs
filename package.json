@@ -1,32 +1,12 @@
 {
-  "name": "manu",
-  "description": "Web development framework based on express",
+  "name": "application-name",
   "version": "0.0.1",
-  "author": {
-    "name": "Rajiv Kumar",
-    "email": "rajiv@manusis.com"
+  "private": true,
+  "scripts": {
+    "start": "node app"
   },
-  "contributors": [
-  ],
   "dependencies": {
     "express": "3.1.0",
-    "ejs" : "*",
-    "ffmpeg" : "*",
-    "imagemagick" : "*"
-  },
-  "devDependencies": {
-  },
-  "keywords": [
-    "manu",
-    "framework",
-    "express",
-    "web",
-    "app",
-    "api"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/manusis/manu"
-  },
-  "main": "index"
+    "jade": "*"
+  }
 }
