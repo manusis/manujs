@@ -6,9 +6,10 @@
 var express = require('express')
   , http = require('http')
   , path = require('path')
-  , manu = require('manu')
+  , manu = require('./lib/manu.js')
 
 var app = express();
+manu.setApp(app);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

@@ -1,26 +1,28 @@
 
 
 exports.before = function(req, res, next){
-console.log("before");
+res.send();
+
 }
 
 exports.list = function(req, res, next){
-console.log("list");
-console.log(req);
 
+res.render("list", {});
 };
 
 exports.edit = function(req, res, next){
-console.log("edit");
-console.log(req);
+res.send("this is edit action in dummies");
 };
 
 exports.show = function(req, res, next){
-console.log("show");
-console.log(req);
+res.send(req.params);
+res.send("this is show action in dummies");
+
 };
 
 exports.update = function(req, res, next){
 console.log("update");
 console.log(req);
+res.send();
+
 };
