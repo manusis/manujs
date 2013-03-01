@@ -28,7 +28,7 @@ app.configure('development', function(){
 
 manu.loadControllers(app);
 require('./config/routes.js')(app);
-console.log(app.routes);
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
