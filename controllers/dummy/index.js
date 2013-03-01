@@ -6,7 +6,7 @@ res.send();
 }
 
 exports.list = function(req, res, next){
-
+console.log("here");
 res.render("list", {});
 };
 

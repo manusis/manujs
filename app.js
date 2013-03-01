@@ -6,10 +6,9 @@
 var express = require('express')
   , http = require('http')
   , path = require('path')
-  , manu = require('./lib/manu.js')
+  , manu = require('manu')
 
 var app = express();
-manu.setApp(app);
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -27,9 +26,9 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-manu.loadControllers();
-manu.loadRoutes();
-
+manu.loadControllers(app);
+require('./config/routes.js')(app);
+console.log(app.routes);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
