@@ -34,6 +34,8 @@ app.use(express.methodOverride());
 // load controllers
 require('./lib/boot')(app, { verbose: !module.parent });
 
+require('./lib/service')(app);
+
 // assume "not found" in the error msgs
 // is a 404. this is somewhat silly, but
 // valid, you can do whatever you like, set
