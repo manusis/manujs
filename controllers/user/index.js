@@ -1,3 +1,4 @@
+console.log('enter in to index.js');
 var pets = [];
 pets.push({ name: 'Tobi', id: 0 });
 pets.push({ name: 'Loki', id: 1 });
